@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Jump for Joy</title> 
+		<link href="styles/my_style.css" rel="stylesheet">
+	</head> 
+	<body> 
+		<div id="header">
+			<h2>Jump for Joy Sale</h2>
+		</div>
+		<div id="main">
+			<div class="guess_box"><img src="images/jump1.jpg"/></div>
+			<div class="guess_box"><img src="images/jump2.jpg"/></div>
+			<div class="guess_box"><img src="images/jump3.jpg"/></div>
+			<div class="guess_box"><img src="images/jump4.jpg"/></div>
+		</div>
+		<script src="scripts/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".guess_box").click(function(){
+					$(".guess_box p").remove(); //새 메시지만 표시
+					var discount = Math.floor((Math.random()*5) + 5);
+					var discount_msg = "<p>" + discount + "% 할인되었습니다 </p>"; //guess_box 다음에 표시
+					alert(discount_msg);
+					$(this).append(discount_msg); //누른 사진에만 표시
+				}); //click 함수 끝
+			});
+		</script>
+	</body>
+</html>
