@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<title>Furry Friends Campaign</title>
+		<link rel="stylesheet" type="text/css" href="styles/my_style.css">
+	</head>
+	<body>
+		<!-- <div id="showfriend">
+			<a href="#">
+				<h2>Our Furry Friends Need Your Help</h2>
+				<img src="images/furry_friend.jpg" alt="Our Furry Friend">
+			</a>
+		</div> -->
+		<div id="clickMe">오늘의 털 많은 친구를 보여주세요</div>
+		<div id="picframe">
+			<img src="images/furry_friend.jpg">
+		</div>
+		<script src="scripts/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#clickMe").click(function(){
+					$("img").fadeIn(1000);
+					$('#picframe').slideToggle("slow");
+				});
+			});
+		</script>
+	</body>
+</html>
